@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table Practice</title>
+    <script src="table_practice.js" defer></script>
+    <style>
+        body{
+            margin: 40px;
+        }
+        
+        table,th,td{
+            border: solid black 1px;
+            border-collapse: collapse;
+            font-weight: bold;
+            padding: 20px;
+            text-align:center
+        }
+
+        table{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form>
+                <p>Nama: <input type="text" id="nama"> Tgl.Lahir: <input type="date" id="tanggal"> Kota: <input type="text" id="kota"></p>
+            </form>
+            <input type="button" value="DAFTAR" onclick="daftar()">
+            <input type="button" value="Sort Nama &uarr;" onclick="sortNamaUp()">
+            <input type="button" value="Sort Nama &darr;" onclick="sortNamaDown()">
+            <input type="button" value="Sort Usia &uarr;" onclick="sortUsiaUp()">
+            <input type="button" value="Sort Usia &darr;" onclick="sortUsiaDown()">
+            <input type="button" value="Sort Kota &uarr;" onclick="sortKotaUp()">
+            <input type="button" value="Sort Kota &darr;" onclick="sortKotaDown()">
+        
+            <table id="mainTable">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th colspan="3">Tanggal Lahir</th>
+                        <th>Zodiak</th>
+                        <th>Usia</th>
+                        <th>Pensiun</th>
+                        <th>Kota</th>
+                        <th>Hapus</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTable">
+                </tbody>
+            </table>
+    </center>
+</body>
+</html>
